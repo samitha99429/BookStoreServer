@@ -10,8 +10,9 @@ dotenv.config();
 // Connect to MongoDB
 connectDB();
 
-// Allowed origins
-const allowedOrigins = ['https://product-frontend-mauve.vercel.app'];
+const app = express();
+
+const allowedOrigins = ['https://books-store-client-one.vercel.app/'];
 
 app.use(cors({
   origin: (origin, callback) => {
@@ -24,8 +25,7 @@ app.use(cors({
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   credentials: true, // Enable credentials
 }));
-const app = express();
-app.use(cors());
+
 app.use(express.json());
 
 // Routes
