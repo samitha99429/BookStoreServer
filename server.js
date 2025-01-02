@@ -1,5 +1,3 @@
-// server.js
-
 const express = require('express');
 const dotenv = require('dotenv');
 const connectDB = require('./config/db');
@@ -17,7 +15,11 @@ connectDB();
 const app = express();
 
 // Define allowed origins
-const allowedOrigins = ['https://books-store-client-one.vercel.app'];
+const allowedOrigins = [
+  'https://books-store-client-one.vercel.app',
+  'https://books-store-client-c3ks7x096-samithas-projects-66fa87b4.vercel.app',
+  'http://localhost:3000' // Add localhost for development
+];
 
 // Configure CORS middleware
 app.use(cors({
