@@ -18,7 +18,7 @@ const app = express();
 const allowedOrigins = [
   'https://books-store-client-one.vercel.app',
   'https://books-store-client-c3ks7x096-samithas-projects-66fa87b4.vercel.app',
-  'http://localhost:3000' // Add localhost for development
+  'http://localhost:3001' // Add localhost for development
 ];
 
 // Configure CORS middleware
